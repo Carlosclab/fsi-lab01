@@ -32,7 +32,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <start-class>com.udea.aerolinea.AerolineaVirtualApp</start-class>
-        <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx1G</argLine>
+        <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx1G -Dapi.version=1.44</argLine>
         <m2e.apt.activation>jdt_apt</m2e.apt.activation>
         <run.addResources>false</run.addResources>
         <spring-boot.version>${project.parent.version}</spring-boot.version>
@@ -488,6 +488,11 @@
                             <include>**/*IntTest*</include>
                         </includes>
                         <argLine>@{argLine} -Dspring.profiles.active=${profile.test}</argLine>
+                        <environmentVariables>
+                            <DOCKER_HOST>unix:///var/run/docker.sock</DOCKER_HOST>
+                            <DOCKER_API_VERSION>1.44</DOCKER_API_VERSION>
+                            <TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE>/var/run/docker.sock</TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE>
+                        </environmentVariables>
                     </configuration>
                     <executions>
                         <execution>
@@ -536,6 +541,11 @@
                         <systemPropertyVariables>
                             <java.util.logging.config.file>src/test/resources/logback.xml</java.util.logging.config.file>
                         </systemPropertyVariables>
+                        <environmentVariables>
+                            <DOCKER_HOST>unix:///var/run/docker.sock</DOCKER_HOST>
+                            <DOCKER_API_VERSION>1.44</DOCKER_API_VERSION>
+                            <TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE>/var/run/docker.sock</TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE>
+                        </environmentVariables>
                     </configuration>
                 </plugin>
                 <plugin>
