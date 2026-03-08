@@ -8,10 +8,10 @@
       "entities": {
         "main": "Entities",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
-        "pasajero": "Pasajero",
-        "reserva": "Reserva",
-        "vuelo": "Vuelo",
-        "asiento": "Asiento"
+        "pasajero": "Passenger",
+        "reserva": "Reservation",
+        "vuelo": "Flight",
+        "asiento": "Seat"
       },
       "account": {
         "main": "Account",

@@ -2,26 +2,26 @@
   "aerolineaVirtualApp": {
     "asiento": {
       "home": {
-        "title": "Asientos",
+        "title": "Seats",
         "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Asiento",
-        "createOrEditLabel": "Create or edit a Asiento",
-        "notFound": "No Asientos found"
+        "createLabel": "Create a new Seat",
+        "createOrEditLabel": "Create or edit a Seat",
+        "notFound": "No Seats found"
       },
-      "created": "A new Asiento is created with identifier {{ param }}",
-      "updated": "A Asiento is updated with identifier {{ param }}",
-      "deleted": "A Asiento is deleted with identifier {{ param }}",
+      "created": "A new Seat is created with identifier {{ param }}",
+      "updated": "A Seat is updated with identifier {{ param }}",
+      "deleted": "A Seat is deleted with identifier {{ param }}",
       "delete": {
-        "question": "Are you sure you want to delete Asiento {{ id }}?"
+        "question": "Are you sure you want to delete Seat {{ id }}?"
       },
       "detail": {
-        "title": "Asiento"
+        "title": "Seat"
       },
       "id": "ID",
-      "numero": "Numero",
-      "clase": "Clase",
-      "disponible": "Disponible",
-      "reserva": "Reserva"
+      "numero": "Number",
+      "clase": "Class",
+      "disponible": "Available",
+      "reserva": "Reservation"
     }
   }
 }
