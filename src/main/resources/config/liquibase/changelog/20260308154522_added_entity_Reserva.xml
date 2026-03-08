@@ -17,7 +17,7 @@
             <column name="codigo" type="varchar(255)">
                 <constraints nullable="false" unique="true" uniqueConstraintName="ux_reserva__codigo" />
             </column>
-            <column name="fecha_reserva" type="${datetimeType}">
+            <column name="fecha_reserva" type="datetime(6)">
                 <constraints nullable="false" />
             </column>
             <column name="estado" type="varchar(255)">
@@ -34,7 +34,7 @@
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </createTable>
-        <dropDefaultValue tableName="reserva" columnName="fecha_reserva" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="reserva" columnName="fecha_reserva" columnDataType="datetime(6)"/>
     </changeSet>
 
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
