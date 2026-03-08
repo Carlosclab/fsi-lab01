@@ -1,0 +1,29 @@
+{
+  "aerolineaVirtualApp": {
+    "reserva": {
+      "home": {
+        "title": "Reservas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Reserva",
+        "createOrEditLabel": "Create or edit a Reserva",
+        "notFound": "No Reservas found"
+      },
+      "created": "A new Reserva is created with identifier {{ param }}",
+      "updated": "A Reserva is updated with identifier {{ param }}",
+      "deleted": "A Reserva is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Reserva {{ id }}?"
+      },
+      "detail": {
+        "title": "Reserva"
+      },
+      "id": "ID",
+      "codigo": "Codigo",
+      "fechaReserva": "Fecha Reserva",
+      "estado": "Estado",
+      "vuelo": "Vuelo",
+      "asiento": "Asiento",
+      "pasajero": "Pasajero"
+    }
+  }
+}

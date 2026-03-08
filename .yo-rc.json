@@ -1,0 +1,29 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "aerolineaVirtual",
+    "buildTool": "maven",
+    "cacheProvider": "ehcache",
+    "clientFramework": "react",
+    "clientTestFrameworks": [],
+    "creationTimestamp": 1772984462500,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "enableHibernateCache": true,
+    "enableTranslation": true,
+    "entities": ["Pasajero", "Reserva", "Vuelo", "Asiento"],
+    "jhipsterVersion": "8.11.0",
+    "jwtSecretKey": "NTcwZDg5NjQ0NTEyNDNmOTA4NDVmNTQ3YmQ1NTMzNDY4ODEwMTkyZjBiYjkzYTVlM2MwMmVmM2FkNTU5ZDc4NmE3ZDY5ODgwNmNmMzNiNDYwMzkwZDE4ODdhNTY1MDMwZGRmZmM3M2I4YmE0YjUzNDgxN2Q5NDliM2Q4ODQ1ODI=",
+    "languages": ["es", "en"],
+    "lastLiquibaseTimestamp": 1772984724000,
+    "nativeLanguage": "es",
+    "packageName": "com.udea.aerolinea",
+    "prodDatabaseType": "mysql",
+    "reactive": false,
+    "searchEngine": false,
+    "testFrameworks": [],
+    "websocket": false,
+    "withAdminUi": true
+  }
+}

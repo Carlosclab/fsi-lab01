@@ -1,0 +1,29 @@
+{
+  "aerolineaVirtualApp": {
+    "pasajero": {
+      "home": {
+        "title": "Pasajeros",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Pasajero",
+        "createOrEditLabel": "Crear o editar Pasajero",
+        "notFound": "Ningún Pasajeros encontrado"
+      },
+      "created": "Un nuevo Pasajero ha sido creado con el identificador {{ param }}",
+      "updated": "Un Pasajero ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Pasajero ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Pasajero {{ id }}?"
+      },
+      "detail": {
+        "title": "Pasajero"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "apellido": "Apellido",
+      "email": "Email",
+      "telefono": "Telefono",
+      "fechaNacimiento": "Fecha Nacimiento",
+      "reserva": "Reserva"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+entity Pasajero {
+  nombre String required
+  apellido String required
+  email String required unique
+  telefono String
+  fechaNacimiento LocalDate
+}
+
+entity Reserva {
+  codigo String required unique
+  fechaReserva Instant required
+  estado String required
+}
+
+entity Vuelo {
+  numeroVuelo String required unique
+  origen String required
+  destino String required
+  fechaSalida Instant required
+  fechaLlegada Instant required
+}
+
+entity Asiento {
+  numero String required
+  clase String required
+  disponible Boolean required
+}
+
+relationship OneToMany {
+  Pasajero to Reserva
+}
+
+relationship ManyToOne {
+  Reserva to Vuelo
+  Reserva to Asiento
+}
+
+paginate Pasajero, Reserva, Vuelo, Asiento with pagination
+service Pasajero, Reserva, Vuelo, Asiento with serviceClass

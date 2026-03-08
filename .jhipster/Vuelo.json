@@ -1,0 +1,46 @@
+{
+  "annotations": {
+    "changelogDate": "20260308154523"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "numeroVuelo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "origen",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "destino",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fechaSalida",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "fechaLlegada",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Vuelo",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "reserva",
+      "otherEntityRelationshipName": "vuelo",
+      "relationshipName": "reserva",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

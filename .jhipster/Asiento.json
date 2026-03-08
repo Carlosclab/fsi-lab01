@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20260308154524"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "numero",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "clase",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "disponible",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Asiento",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "reserva",
+      "otherEntityRelationshipName": "asiento",
+      "relationshipName": "reserva",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

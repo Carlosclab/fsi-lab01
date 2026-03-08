@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Vuelo.
+    -->
+    <changeSet id="20260308154523-1" author="jhipster">
+        <createTable tableName="vuelo">
+            <column name="id" type="bigint" autoIncrement="true" startWith="1500">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="numero_vuelo" type="varchar(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="ux_vuelo__numero_vuelo" />
+            </column>
+            <column name="origen" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="destino" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="fecha_salida" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="fecha_llegada" type="${datetimeType}">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="vuelo" columnName="fecha_salida" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="vuelo" columnName="fecha_llegada" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20260308154523-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/vuelo.csv"
+                  separator=";"
+                  tableName="vuelo"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="numero_vuelo" type="string"/>
+            <column name="origen" type="string"/>
+            <column name="destino" type="string"/>
+            <column name="fecha_salida" type="date"/>
+            <column name="fecha_llegada" type="date"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

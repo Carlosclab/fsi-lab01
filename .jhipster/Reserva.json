@@ -1,0 +1,50 @@
+{
+  "annotations": {
+    "changelogDate": "20260308154522"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "codigo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "fechaReserva",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Reserva",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "vuelo",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "vuelo",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "asiento",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "asiento",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "pasajero",
+      "otherEntityRelationshipName": "reserva",
+      "relationshipName": "pasajero",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}
